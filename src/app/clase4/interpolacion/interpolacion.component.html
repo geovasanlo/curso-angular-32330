@@ -1,0 +1,54 @@
+<p>Componente de interpolación</p>
+<div
+    [ngClass]="nombre ? 'clase-ejemplo' : ''"
+    [style.font-size]="nombre ? '20px' : '10px'">
+    {{nombre ? nombre : 'Vacío'}}
+</div>
+<br>
+<button (click)="nombre='Texto ejemplo'">Asignar Texto</button>
+<button (click)="nombre=''">Remover Texto</button>
+<br>
+<div appMiDirectiva>
+    Conexion
+</div>
+<br><br><br>
+<ul>
+    <li *ngFor="let nombrePersona of personas">
+        Nombre: {{nombrePersona}}
+    </li>
+</ul>
+<br><br>
+<div *ngIf="bandera">
+    La bandera está activada
+</div>
+<br>
+<button (click)="bandera=true">Encender bandera</button>
+<button (click)="bandera=false">Apagar bandera</button>
+<br><br>
+<div [ngSwitch]="valorSwitch">
+    <span *ngSwitchCase="'valor1'">Valor 1</span>
+    <p *ngSwitchCase="'valor2'">Valor 2</p>
+    <strong *ngSwitchCase="'valor3'">Valor 3</strong>
+ </div>
+<button (click)="valorSwitch='valor1'">1</button>
+<button (click)="valorSwitch='valor2'">2</button>
+<button (click)="valorSwitch='valor3'">3</button>
+<br><br><br>
+<button (click)="decirHola()">Click me!</button>
+<br><br><br>
+<p>
+    <label for="nombre">Nombre: </label>
+    <input id="nombre" [(ngModel)]="nombre" />
+</p>
+<p>
+    <label for="apellido">Apellido: </label>
+    <input id="apellido" [(ngModel)]="apellido" />
+</p>
+ <button (click)="verDatos()">Mostrar</button>
+ <button (click)="cargarDatos()">Cargar</button>
+ <br><br><br>
+ <div>
+    Hoy es: {{hoy | date : 'h:mm a'}} <br>
+    {{25.5 | currency}} <br>
+    {{'Mi Texto Pipe' | miPipe : 'Mayus'}}
+ </div>
