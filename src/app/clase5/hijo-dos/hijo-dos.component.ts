@@ -17,4 +17,8 @@ export class HijoDosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sayHello(): void {
+    alert(this.alumno.nombre + ' dice Hola!');
+  }
+
 }
