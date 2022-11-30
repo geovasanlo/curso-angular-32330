@@ -1,0 +1,6 @@
+<div (click)="selec()">
+    <strong>Alumno: </strong>{{alumno.nombre}} <br>
+    <span>Calificacion: </span>
+    <span [ngClass]="alumno.calificacion < 70 ? 'red' : 'blue'">{{alumno.calificacion}}</span>
+</div>
+

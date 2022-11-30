@@ -1,0 +1,8 @@
+<div class="m-4">
+    <span *ngIf="seleccionado" class="text-danger">Alumno seleccionado: {{seleccionado.nombre}}</span>
+    <!--<button class="btn btn-secondary">Boton</button>-->
+    <div *ngFor="let alumno of alumnos">
+        <app-hijo-uno [alumno]="alumno" (seleccionado)="alumnoSeleccionado($event)"></app-hijo-uno>
+    </div>
+</div>
+
