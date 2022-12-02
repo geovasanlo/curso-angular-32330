@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { AbueloComponent } from './clase5/abuelo/abuelo.component';
 import { HijoUnoComponent } from './clase5/hijo-uno/hijo-uno.component';
 import { HijoDosComponent } from './clase5/hijo-dos/hijo-dos.component';
 import { NietoUnoComponent } from './clase5/nieto-uno/nieto-uno.component';
+import { FormulariosComponent } from './clase6/formularios/formularios.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import { NietoUnoComponent } from './clase5/nieto-uno/nieto-uno.component';
     AbueloComponent,
     HijoUnoComponent,
     HijoDosComponent,
-    NietoUnoComponent
+    NietoUnoComponent,
+    FormulariosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
