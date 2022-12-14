@@ -17,6 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EjemplosMaterialComponent } from './clase7/ejemplos-material/ejemplos-material.component';
 import { MaterialModule } from './modulos/material.module';
 import { ModalComponent } from './clase7/modal/modal.component';
+import { PipesComponent } from './clase8/pipes/pipes.component';
+import { MiCustomPipe } from './clase8/pipes/mi-custom.pipe';
+import { AlumnoPipe } from './clase8/pipes/alumno.pipe';
+import { MiPropiaDirective } from './clase8/directivas/mi-propia.directive';
+import { RepetirDirective } from './clase8/directivas/repetir.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,12 @@ import { ModalComponent } from './clase7/modal/modal.component';
     NietoUnoComponent,
     FormulariosComponent,
     EjemplosMaterialComponent,
-    ModalComponent
+    ModalComponent,
+    PipesComponent,
+    MiCustomPipe,
+    AlumnoPipe,
+    MiPropiaDirective,
+    RepetirDirective
   ],
   imports: [
     BrowserModule,

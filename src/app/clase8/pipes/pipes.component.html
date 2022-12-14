@@ -1,0 +1,15 @@
+<div class="m-5">
+    Pipes personalizados <br>
+    {{miPropiedad | miCustomPipe : '!' : 'upper'}} <br>
+    <div *ngFor="let alumno of alumnos ; let i = index" (mouseenter)="hover = i" (mouseleave)="hover=-1">
+        <div appMiPropiaDirectiva [alumno]="alumno" weight="200" [colorNombre]="''">
+            {{i}}.-{{alumno | alumno : hover === i ? 'long' : null}}
+        </div>
+    </div>
+</div>
+<br><br><br>
+<div>
+    <span *appRepetir="10">
+        Hola!<br>
+    </span>
+</div>
