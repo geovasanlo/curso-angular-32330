@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { InjectionToken, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -22,6 +22,12 @@ import { MiCustomPipe } from './clase8/pipes/mi-custom.pipe';
 import { AlumnoPipe } from './clase8/pipes/alumno.pipe';
 import { MiPropiaDirective } from './clase8/directivas/mi-propia.directive';
 import { RepetirDirective } from './clase8/directivas/repetir.directive';
+import { ServiciosComponent } from './clase9/servicios/servicios.component';
+import { ListaAlumnosComponent } from './clase9/servicios/lista-alumnos/lista-alumnos.component';
+import { MiServicioService } from './clase9/servicios/mi-servicio.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+export const APIURL = new InjectionToken('APIURL');
 
 @NgModule({
   declarations: [
@@ -42,16 +48,21 @@ import { RepetirDirective } from './clase8/directivas/repetir.directive';
     MiCustomPipe,
     AlumnoPipe,
     MiPropiaDirective,
-    RepetirDirective
+    RepetirDirective,
+    ServiciosComponent,
+    ListaAlumnosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: APIURL, useValue: 'https://rickandmortyapi.com/api'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
