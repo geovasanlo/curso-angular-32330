@@ -1,0 +1,13 @@
+<div class="m-4">
+    <p>observables works!</p>
+    <p *ngIf="visible">
+        <app-fecha></app-fecha>
+    </p>
+    <div>
+        <button (click)="visible=!visible">Ver/Ocultar</button>
+    </div>
+    <div>
+        <app-contador></app-contador>
+    </div>
+</div>
+

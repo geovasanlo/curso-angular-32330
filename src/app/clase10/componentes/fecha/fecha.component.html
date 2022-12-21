@@ -1,0 +1,7 @@
+<p>fecha works!</p>
+<p>
+    {{(fechaObservable | async) | date : 'long'}}
+</p>
+<div *ngFor="let usuario of (this.servicio.usuarios$ | async)">
+    {{usuario.id}} - {{usuario.email}}
+</div>

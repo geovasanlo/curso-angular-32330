@@ -26,6 +26,9 @@ import { ServiciosComponent } from './clase9/servicios/servicios.component';
 import { ListaAlumnosComponent } from './clase9/servicios/lista-alumnos/lista-alumnos.component';
 import { MiServicioService } from './clase9/servicios/mi-servicio.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ObservablesComponent } from './clase10/componentes/observables/observables.component';
+import { FechaComponent } from './clase10/componentes/fecha/fecha.component';
+import { ContadorComponent } from './clase10/componentes/contador/contador.component';
 
 export const APIURL = new InjectionToken('APIURL');
 
@@ -50,7 +53,10 @@ export const APIURL = new InjectionToken('APIURL');
     MiPropiaDirective,
     RepetirDirective,
     ServiciosComponent,
-    ListaAlumnosComponent
+    ListaAlumnosComponent,
+    ObservablesComponent,
+    FechaComponent,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,
